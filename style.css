@@ -100,20 +100,18 @@ h3 {
 }
 
 
-.question {
+.question, .question1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.question:hover {
+.question:hover, .question1:hover{
     color: hsl(14, 88%, 65%);
     cursor: pointer;
 }
 
-.question-active {
-    font-weight: 700;
-}
+
 
 .arrow-down {
     height: 100%;
@@ -121,13 +119,11 @@ h3 {
     transition: rotate 0.2s;
 }
 
-.arrow-down-active {
-    rotate: 180°;
-}
 
 
 
-.ans {
+
+.ans, .ans1 {
     height: 0;
     overflow: hidden;
     transition: all 0.2s;

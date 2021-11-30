@@ -1,8 +1,10 @@
-let answer = document.querySelector('.ans');
+let answer1 = document.querySelectorAll('.ans1');
 
 
-document.querySelector('.question').addEventListener("click", presentation)
+document.querySelectorAll('.question1').addEventListener("click", presentation)
 
 function presentation() {
-    answer.classList.toggle('.ans-active')
+    answer1.classList.toggle('.ans-active')
 }
+
+presentation()
