@@ -39,12 +39,14 @@
       </div>
       <div class="faq">
         <h2>FAQ</h2>
+
+        
         <div class="quest">
-          <div class="question1">
-            <h3> How many team members can I invite?</h3>
+          <div class="question">
+            <h3>How many team members can I invite?</h3>
             <img src="/images/icon-arrow-down.svg" alt="" class="arrow-down">
           </div>
-          <div class="ans1">
+          <div class="ans">
             <p> You can invite up to 2 additional users on the Free plan. There is no limit on
               team members for the Premium plan.</p>
           </div>
@@ -54,7 +56,7 @@
             <h3>What is the maximum file upload size?</h3>
             <img src="/images/icon-arrow-down.svg" alt="" class="arrow-down">
           </div>
-          <div class="ans-active">
+          <div class="ans">
             <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
           </div>
         </div>
@@ -94,28 +96,37 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">El Barto</a>.
   </div>
 
+<!-- Accordion script -->
 
   <script>
+    var acc = document.getElementsByClassName("question");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+         var panel = this.nextElementSibling;
+         if (panel.style.maxHeight) {
+         panel.style.maxHeight = null;
+         }  else {
+  let active = document.querySelectorAll(".question.active");
+  for(let j = 0; j < active.length; j++){
+    active[j].classList.remove("active");
+    active[j].nextElementSibling.style.maxHeight = null;
+  }
+  this.classList.toggle("active");
+  panel.style.maxHeight = panel.scrollHeight + "px";
+}
+});
+}
+    
+    </script>
 
-
-
-  </script>
 
 </body>
 

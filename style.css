@@ -72,9 +72,23 @@ body {
     padding-left: 20px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .quest {
     border-bottom: solid 1px lightgray;
     font-size: 14px;
+    position: relative;
     
 }
 
@@ -100,13 +114,15 @@ h3 {
 }
 
 
-.question, .question1 {
+.question {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: none;
+    background: transparent;
 }
 
-.question:hover, .question1:hover{
+.question:hover {
     color: hsl(14, 88%, 65%);
     cursor: pointer;
 }
@@ -116,23 +132,35 @@ h3 {
 .arrow-down {
     height: 100%;
     margin-left: 20px;
-    transition: rotate 0.2s;
+    
+    transition: all 0.4s ease-out;
 }
 
 
 
-
-
-.ans, .ans1 {
-    height: 0;
+.ans {
+    position: relative;
+    max-height: 0;
     overflow: hidden;
-    transition: all 0.2s;
+    transition: all 0.4s ease-out;
+    color: #111;
+    margin-bottom: 0px;
 }
 
-.ans-active {
+.active h3 {
     height: fit-content;
-    padding-bottom: 20px;
+    font-weight: 800;
 }
+
+
+.active .arrow-down {
+    transform: rotate(0.25turn);
+}
+
+p {
+    margin-bottom: 18px;
+}
+
 
 .card-box {
     position: absolute;
